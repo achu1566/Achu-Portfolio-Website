@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+.hobbies-container{
+   width: 100%;
+   top: 10vh;
+    position: absolute;
+    min-height: 100vh;
+}
+
+.hobbies-section {
+  padding: 80px 6%;
+  position: relative;
+  z-index: 2;
+}
+
+.hobbies-title {
+  font-size: 2.6rem;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.hobbies-subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.hobby-card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  background: #0b1020;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobby-card:hover {
+  transform: translateY(-6px);
+  border-color: #6366f1;
+  box-shadow: 0 0 22px rgba(99, 102, 241, 0.6);
+}
+
+/* LEFT IMAGE */
+.hobby-left {
+  width: 100%;
+  height: 220px;              /* KEY: fixed visual height */
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at top,
+    rgba(99, 102, 241, 0.15),
+    transparent 70%
+  );
+}
+
+.hobby-left img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;          /* IMPORTANT */
+  border-radius: 10px;
+  filter: brightness(0.9);
+  transition: transform 0.4s ease;
+}
+
+.hobby-card:hover .hobby-left img {
+  transform: scale(1.03);
+}
+
+/* RIGHT CONTENT */
+.hobby-right h3 {
+  color: #e5e7eb;
+  font-size: 1.2rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  margin: 6px 0 10px;
+  font-size: 0.8rem;
+  color: #c7d2fe;
+  background: rgba(99, 102, 241, 0.15);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.hobby-right p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* PROOF LINK */
+.proof-link {
+  font-size: 0.9rem;
+  color: #8b5cf6;
+  text-decoration: none;
+  position: relative;
+}
+
+.proof-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: #8b5cf6;
+  transition: width 0.3s ease;
+}
+
+.proof-link:hover::after {
+  width: 100%;
+}
+
+/* HOBBY STATS (UL) */
+.hobby-right .overview-habbits {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 14px;
+  margin: 14px 0 18px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+}
+
+/* Each stat item */
+.hobby-right .overview-habbits li {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+/* Dot indicator */
+.hobby-right .overview-habbits li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6366f1;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.8);
+  flex-shrink: 0;
+}
+
+/* Highlight numbers */
+.hobby-right .overview-habbits li strong {
+  color: #c7d2fe;
+  font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hobbies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hobby-left {
+    justify-content: center;
+  }
+}
+
+/* effects */
+.area {
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to left, #24243e, #0f0c29);  
+    width: 100%;
+    height: 100vh;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.area,
+.circles,
+.circles li {
+    pointer-events: none;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.circles li {
+    /* default for subtle glow */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255,255,255,0.3); /* soft glow */
+}
+
+/* Neon variations for each circle */
+.circles li:nth-child(1){ background: rgba(0, 255, 255, 0.5); box-shadow: 0 0 20px #00ffff; }   /* cyan */
+.circles li:nth-child(2){ background: rgba(255, 0, 255, 0.5); box-shadow: 0 0 20px #ff00ff; }   /* magenta */
+.circles li:nth-child(3){ background: rgba(0, 255, 0, 0.5); box-shadow: 0 0 20px #00ff00; }     /* neon green */
+.circles li:nth-child(4){ background: rgba(255, 255, 0, 0.5); box-shadow: 0 0 20px #ffff00; }   /* neon yellow */
+.circles li:nth-child(5){ background: rgba(0, 128, 255, 0.5); box-shadow: 0 0 20px #0080ff; }   /* electric blue */
+.circles li:nth-child(6){ background: rgba(255, 69, 0, 0.5); box-shadow: 0 0 20px #ff4500; }    /* orange red */
+.circles li:nth-child(7){ background: rgba(148, 0, 211, 0.5); box-shadow: 0 0 20px #9400d3; }   /* violet */
+.circles li:nth-child(8){ background: rgba(0, 255, 128, 0.5); box-shadow: 0 0 20px #00ff80; }   /* teal green */
+.circles li:nth-child(9){ background: rgba(255, 20, 147, 0.5); box-shadow: 0 0 20px #ff1493; }  /* deep pink */
+.circles li:nth-child(10){ background: rgba(255, 140, 0, 0.5); box-shadow: 0 0 20px #ff8c00; }  /* dark orange */
+
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

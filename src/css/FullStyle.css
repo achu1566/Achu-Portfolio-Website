@@ -1,0 +1,90 @@
+/* NAVBAR */
+.nav-bar {
+    position: fixed;        /* stick to top */
+    top: 20px;              /* space from top */
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 30px;
+
+    padding: 12px 30px;
+    border-radius: 30px;
+
+    background: rgba(13, 27, 42, 0.4); /* dark blue glass */
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+/* NAV ITEMS */
+.nav-items {
+    list-style: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.nav-items::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+    background: #00b0ff; /* neon blue */
+    transition: width 0.3s ease;
+}
+
+.nav-items:hover {
+    color: #00b0ff;
+}
+
+.nav-items:hover::after {
+    width: 100%;
+}
+
+
+
+/* ICON WRAPPER */
+.message-icon-wrapper {
+  position: fixed;
+  top: 32px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* MESSAGE ICON */
+.message-bar-notification {
+  color: #4f46e5;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.message-icon-wrapper:hover .message-bar-notification {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.8));
+}
+
+/* BADGE */
+.message-badge {
+  position: absolute;
+  bottom: -3px;
+  right: -10px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
