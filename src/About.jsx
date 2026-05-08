@@ -1,6 +1,6 @@
 import { FaBriefcase, FaCode, FaTools, FaProjectDiagram, FaUser, FaLaptopCode, FaGraduationCap, FaCogs, FaLightbulb } from "react-icons/fa";
 import "./css/About.css";
-import Image from "./assets/Achu.jpg";
+import Image from "./assets/Achu.JPG";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 
