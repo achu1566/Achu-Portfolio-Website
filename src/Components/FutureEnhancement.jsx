@@ -19,27 +19,28 @@ const FutureEnhancement = ({ onClose }) => {
 
         <div className="future-grid">
           <div className="future-card">
-            <h4>💬 Live Chat System</h4>
-            <p>Real-time chat using WebSockets or Firebase.</p>
-            <span className="future-tag planned">Planned</span>
+            <h4>Java LLD Mastery</h4>
+            <p>Building scalable Low Level Design skills in Java by practicing object-oriented design patterns and real-world system architecture.</p>
+            <span className="future-tag planned">Learning</span>
           </div>
 
           <div className="future-card">
-            <h4>📊 Admin Dashboard</h4>
-            <p>Analytics dashboard to track portfolio engagement.</p>
-            <span className="future-tag design">In Design</span>
+            <h4>Daily LeetCode Challenge</h4>
+            <p>Solving coding problems consistently to strengthen problem-solving, DSA concepts, and interview preparation skills.
+</p>
+            <span className="future-tag design">On going</span>
           </div>
 
           <div className="future-card">
-            <h4>🎨 Theme Switcher</h4>
-            <p>Dark / Light / Neon themes with persistence.</p>
-            <span className="future-tag upcoming">Upcoming</span>
+            <h4>AI & Intelligent Systems</h4>
+            <p>Exploring Artificial Intelligence, machine learning concepts, and modern AI tools to build smarter applications.</p>
+            <span className="future-tag upcoming">Planned</span>
           </div>
 
           <div className="future-card">
-            <h4>📁 Case Studies</h4>
-            <p>Detailed project architecture and decisions.</p>
-            <span className="future-tag planned">Planned</span>
+            <h4>Professional English Communication</h4>
+            <p>Improving fluency, confidence, and presentation skills for interviews, seminars, and professional conversations.</p>
+            <span className="future-tag planned">On going</span>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
-import { FaBriefcase, FaCode, FaTools, FaProjectDiagram } from "react-icons/fa";
+import { FaBriefcase, FaCode, FaTools, FaProjectDiagram, FaUser, FaLaptopCode, FaGraduationCap, FaCogs, FaLightbulb } from "react-icons/fa";
 import "./css/About.css";
-import Image from "./assets/king2.jpg";
+import Image from "./assets/Achu.jpg";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 
@@ -53,13 +53,13 @@ const About = () => {
 
       <div className="stats-card">
         <h1>10+</h1>
-        <p>Worked With Languages & Tools</p>
+        <p>Technologies Used</p>
       </div>
     </div>
 
 
           <p className="about-description">
-            I’m <span>Achu</span>, a <span>Full Stack Developer</span>{" "}
+            I’m <span>Achuthan</span>, a <span>Full Stack Developer</span>{" "}
             passionate about building efficient, scalable, and user-focused web
             applications. I enjoy turning ideas into real-world products by
             combining clean UI design with reliable backend systems.
@@ -110,23 +110,43 @@ const About = () => {
         <div className="about-right">
           <img src={Image} alt="Profile" className="about-image" />
           <div className="about-card">
-            <h3>Quick Info</h3>
+            <h3 className="about-card-title">Quick Info</h3>
 
             <ul>
               <li>
-                <strong>Name:</strong> Achuthan T B
+                <FaUser className="about-card-icon" />
+                <div>
+                  <strong>Name</strong>
+                  <span>Achuthan T B</span>
+                </div>
               </li>
               <li>
-                <strong>Role:</strong> Full Stack Developer
+                <FaLaptopCode className="about-card-icon" />
+                <div>
+                  <strong>Role</strong>
+                  <span>Full Stack Developer</span>
+                </div>
               </li>
               <li>
-                <strong>Education:</strong> College Student
+                <FaGraduationCap className="about-card-icon" />
+                <div>
+                  <strong>Education</strong>
+                  <span>College Student</span>
+                </div>
               </li>
               <li>
-                <strong>Skills:</strong> MERN, Java, Python
+                <FaCogs className="about-card-icon" />
+                <div>
+                  <strong>Skills</strong>
+                  <span>MERN, Java, Python</span>
+                </div>
               </li>
               <li>
-                <strong>Interests:</strong> Problem Solving, System Design
+                <FaLightbulb className="about-card-icon" />
+                <div>
+                  <strong>Interests</strong>
+                  <span>Problem Solving, System Design</span>
+                </div>
               </li>
             </ul>
           </div>

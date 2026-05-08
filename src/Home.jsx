@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { Typewriter } from "react-simple-typewriter";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-
+import resumePDF from "./assets/Achu_Resume.pdf";
 
 import "./css/Home.css";
 
@@ -35,7 +35,7 @@ const Home = () => {
           </p>
 
           <div className="home-button">
-            <button className="home-btn-resume">Download CV</button>
+            <a href={resumePDF} download="Achuthan_Resume.pdf" className="home-btn-resume">Download CV</a>
 
             <div className="home-social-icons">
               <a href="https://www.linkedin.com/in/achuthan-t-b-1522972a2" target="_blank" rel="noreferrer">
@@ -44,7 +44,7 @@ const Home = () => {
               <a href="mailto:achuthan1566@gmail.com">
                 <MdEmail />
               </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer">
+              <a href="https://github.com/achu1566" target="_blank" rel="noreferrer">
                 <FaGithub />
               </a>
               <a href="https://leetcode.com/u/achu1506/" target="_blank" rel="noreferrer">
@@ -52,6 +52,9 @@ const Home = () => {
               </a>
             </div>
           </div>
+
+          {/* Developer Mantra */}
+          <p className="home-quote">Code. Learn. Build. Repeat.</p>
         </div>
       </div>
 

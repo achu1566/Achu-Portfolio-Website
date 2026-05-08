@@ -64,9 +64,9 @@ const Hobbies = () => {
             </p>
 
             <ul  className="overview-habbits">
-              <li>Races : 1000+</li>
-              <li>Races won : 300+</li>
-              <li>Avg.Speed : 60+ WPM</li>
+              <li>Races : 1300+</li>
+              <li>Races won : 350+</li>
+              <li>Avg.Speed : 63+ WPM</li>
               <li>Rank : Type Master</li>
             </ul>
 
@@ -96,7 +96,9 @@ const Hobbies = () => {
             </p>
 
             <a
-              href="#"
+              href="https://achu-drawining-website.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
               className="proof-link"
             >
               Drawing Website (Coming Soon) →

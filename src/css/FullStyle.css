@@ -1,52 +1,56 @@
 /* NAVBAR */
 .nav-bar {
-    position: fixed;        /* stick to top */
-    top: 20px;              /* space from top */
-    left: 50%;
-    transform: translateX(-50%);
+  position: fixed;
+  /* stick to top */
+  top: 20px;
+  /* space from top */
+  left: 50%;
+  transform: translateX(-50%);
 
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 
-    padding: 12px 30px;
-    border-radius: 30px;
+  padding: 12px 30px;
+  border-radius: 30px;
 
-    background: rgba(13, 27, 42, 0.4); /* dark blue glass */
-    backdrop-filter: blur(10px);
+  background: rgba(13, 27, 42, 0.4);
+  /* dark blue glass */
+  backdrop-filter: blur(10px);
 
-    z-index: 1000;
+  z-index: 1000;
 }
 
 /* NAV ITEMS */
 .nav-items {
-    list-style: none;
-    color: white;
-    font-size: 14px;
-    letter-spacing: 1.2px;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.3s ease;
+  list-style: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 /* HOVER EFFECT */
 .nav-items::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
 
-    width: 0%;
-    height: 2px;
-    background: #00b0ff; /* neon blue */
-    transition: width 0.3s ease;
+  width: 0%;
+  height: 2px;
+  background: #00b0ff;
+  /* neon blue */
+  transition: width 0.3s ease;
 }
 
 .nav-items:hover {
-    color: #00b0ff;
+  color: #00b0ff;
 }
 
 .nav-items:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 

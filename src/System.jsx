@@ -3,6 +3,9 @@ import Navbar from "./Components/Navbar";
 import "./css/System.css";
 import project1Image from "./assets/expensetracker.png";
 import placementImg from "./assets/placement-project-image.png";
+import aiCareerImg from "./assets/AI_Career_Path.jpeg";
+import hospital from "./assets/hospital_1.webp";
+
 const Project = () => {
   return (
     <>
@@ -118,6 +121,141 @@ const Project = () => {
             </div>
 
           </div>
+
+
+
+          {/* ===== PROJECT 3: AI Career Path Predictor ===== */}
+          <div className="project-card">
+            <div className="project-left">
+              <div className="image-wrapper">
+                <img
+                  src={aiCareerImg}
+                  alt="AI Powered Student Career Path Predictor"
+                  className="project-image"
+                />
+              </div>
+
+              <div className="project-buttons">
+                <button
+                  className="btn secondary"
+                  onClick={() => window.open("https://github.com/achu1566/AI-Powered-StudentCareerPathPredictor", "_blank")}
+                >
+                  View Architecture
+                </button>
+                <button
+                  className="btn primary"
+                  onClick={() => window.open("https://orbit-edstudentcareerpathpredictor.vercel.app/", "_blank")}
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+
+            <div className="project-right">
+              <h2 className="project-title">
+                AI Powered Student Career Path Predictor
+              </h2>
+
+              <div className="project-section">
+                <h4>Problem Statement</h4>
+                <p>
+                  Many students face difficulty choosing the right career path
+                  due to lack of personalized guidance, unclear understanding of
+                  their strengths, and limited awareness of industry
+                  opportunities.
+                </p>
+              </div>
+
+              <div className="project-section">
+                <h4>Solution</h4>
+                <p>
+                  Developed an AI-powered web application that analyzes student
+                  skills, interests, and academic performance to recommend
+                  suitable career paths and learning directions.
+                </p>
+              </div>
+
+              <div className="project-section">
+                <h4>Tech Stack</h4>
+                <p>
+                  React, Node.js, Express.js, MongoDB, Python, Machine Learning
+                </p>
+              </div>
+
+              <div className="project-section">
+                <h4>Impact</h4>
+                <p>
+                  Helped create a smarter career guidance platform that assists
+                  students in making informed career decisions through AI-driven
+                  recommendations and personalized insights.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+          {/* ===== PROJECT 4: Hospital Management System (LLD) ===== */}
+          <div className="project-card">
+            <div className="project-left">
+              <div className="image-wrapper">
+                <img
+                  src={hospital}
+                  alt="AI Powered Student Career Path Predictor"
+                  className="project-image"
+                />
+              </div>
+
+              <div className="project-buttons">
+                <button
+                  className="btn secondary"
+                  onClick={() => window.open("https://github.com/achu1566/HospitalManagementSystemLLD", "_blank")}
+                >
+                  View Architecture
+                </button>
+              </div>
+            </div>
+
+            <div className="project-right">
+              <h2 className="project-title">
+                Hospital Management System (LLD)
+              </h2>
+
+              <div className="project-section">
+                <h4>Problem Statement</h4>
+                <p>
+                  Managing hospital operations manually can lead to inefficient
+                  patient handling, appointment delays, poor record management,
+                  and difficulty maintaining scalable healthcare workflows.
+                </p>
+              </div>
+
+              <div className="project-section">
+                <h4>Solution</h4>
+                <p>
+                  Built a Java-based Hospital Management System using Low Level
+                  Design principles to manage patients, doctors, appointments,
+                  and billing through a modular and scalable architecture.
+                </p>
+              </div>
+
+              <div className="project-section">
+                <h4>Tech Stack</h4>
+                <p>Java, OOP, Low Level Design (LLD)</p>
+              </div>
+
+              <div className="project-section">
+                <h4>Impact</h4>
+                <p>
+                  Improved understanding of scalable system architecture,
+                  object-oriented design patterns, and real-world healthcare
+                  workflow modeling while strengthening backend development and
+                  problem-solving skills.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

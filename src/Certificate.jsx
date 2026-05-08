@@ -8,6 +8,11 @@ import cert3 from "./certificateAssets/novifullstack.png";
 import cert4 from "./certificateAssets/fullstackJava.png";
 import cert5 from "./certificateAssets/pythonMarcello.png";
 import cert6 from "./certificateAssets/sqlcongnitive.png";
+import cert7 from "./certificateAssets/CyberSecurity_Certificate.jpg";
+import cert8 from "./certificateAssets/Ethical_hacking_nptel.jpg";
+import cert9 from "./certificateAssets/Fullstack_Reccsar.jpg";
+import cert10 from "./certificateAssets/Js&css_Udemy_Certificate.jpg";
+import cert11 from "./certificateAssets/React_Reccsar.jpg";
 
 const certificateData = [
   {
@@ -68,6 +73,56 @@ const certificateData = [
     category: "Database",
     skills: ["CRUD", "Schema Design", "Indexes"],
     context: "Implemented MongoDB collections for student & company data.",
+  },
+  {
+    id: 7,
+    title: "Cybersecurity for Beginners",
+    org: "Tata STRIVE & Microsoft",
+    image: cert7,
+    tag: "Online Course",
+    category: "Cybersecurity",
+    skills: ["Cybersecurity Fundamentals", "Network Security", "Threat Analysis"],
+    context: "Completed a 40-hour course on cybersecurity fundamentals.",
+  },
+  {
+    id: 8,
+    title: "Ethical Hacking",
+    org: "NPTEL – IIT Kharagpur",
+    image: cert8,
+    tag: "Featured",
+    category: "Cybersecurity",
+    skills: ["Penetration Testing", "Network Security", "Vulnerability Assessment"],
+    context: "Elite certification with 76% score in a 12-week NPTEL course.",
+  },
+  {
+    id: 9,
+    title: "Full Stack Web Development",
+    org: "Reccsar Pvt. Ltd.",
+    image: cert9,
+    tag: "Workshop",
+    category: "Full stack",
+    skills: ["HTML & CSS", "JavaScript", "Full Stack Basics"],
+    context: "Participated in a hands-on full stack web development workshop.",
+  },
+  {
+    id: 10,
+    title: "CSS & JavaScript Crash Course",
+    org: "Udemy",
+    image: cert10,
+    tag: "Online Course",
+    category: "Frontend",
+    skills: ["CSS", "JavaScript", "Web Design"],
+    context: "Completed a crash course on CSS and JavaScript fundamentals.",
+  },
+  {
+    id: 11,
+    title: "React JS Workshop",
+    org: "Reccsar Pvt. Ltd.",
+    image: cert11,
+    tag: "Workshop",
+    category: "Frontend",
+    skills: ["React JS", "Components", "State Management"],
+    context: "Participated in a React JS workshop covering core concepts.",
   },
 ];
 
