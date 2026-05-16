@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './Components/Navbar';
+import PageLoader from './Components/PageLoader';
+import usePageLoader from './hooks/usePageLoader';
 import nsicLogo from './assets/nsiclogo2.png';
 import vcetLogo from './assets/vcetlogo.png';
 import collegeGradHat from './assets/college_graduation_hat.webp';
@@ -72,6 +74,7 @@ const Experience = () => {
   const [activeNode, setActiveNode] = useState(milestones[0].id);
   const [isVisible, setIsVisible] = useState(false);
   const wrapperRef = useRef(null);
+  const isLoading = usePageLoader();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -88,6 +91,7 @@ const Experience = () => {
 
   return (
     <div>
+      <PageLoader isLoading={isLoading} />
       <Navbar />
 
       {/* Animated background — original, untouched */}

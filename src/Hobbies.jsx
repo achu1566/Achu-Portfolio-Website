@@ -4,10 +4,14 @@ import chessImg from "./HobbiesImage/chess.png";
 import typingImg from "./HobbiesImage/typing.png";
 import drawingImg from "./HobbiesImage/drawingbrush.png";
 import Navbar from "./Components/Navbar";
+import PageLoader from "./Components/PageLoader";
+import usePageLoader from "./hooks/usePageLoader";
 
 const Hobbies = () => {
+  const isLoading = usePageLoader();
   return (
     <>
+    <PageLoader isLoading={isLoading} />
     <div className="hobbies-container">
       <Navbar />
       <section className="hobbies-section">
@@ -32,10 +36,10 @@ const Hobbies = () => {
             </p>
 
             <ul className="overview-habbits">
-              <li>Games : 300+</li>
-              <li>Games won : 150+</li>
-              <li>Puzzle solved : 200+</li>
-              <li>Rating : 650+</li>
+              <li>Games : 450+</li>
+              <li>Games won : 250+</li>
+              <li>Puzzle solved : 490+</li>
+              <li>Rating : 800+</li>
             </ul>
 
             <a

@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
+import PageLoader from "./Components/PageLoader";
+import usePageLoader from "./hooks/usePageLoader";
 import "./css/System.css";
 import project1Image from "./assets/expensetracker.png";
 import placementImg from "./assets/placement-project-image.png";
@@ -7,8 +9,10 @@ import aiCareerImg from "./assets/AI_Career_Path.jpeg";
 import hospital from "./assets/hospital_1.webp";
 
 const Project = () => {
+  const isLoading = usePageLoader();
   return (
     <>
+      <PageLoader isLoading={isLoading} />
       <div className="context-project">
         <Navbar />
 

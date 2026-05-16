@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../css/FullStyle.css";
 import { IoChatbubbleEllipses } from "react-icons/io5";
 import FutureEnhancement from "./FutureEnhancement";
-
+import futureBrain from "../assets/idea.png";
 const Navbar = ({ futureCount = 4 }) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -27,7 +27,8 @@ const Navbar = ({ futureCount = 4 }) => {
         className="message-icon-wrapper"
         onClick={() => setOpen(true)}
       >
-        <IoChatbubbleEllipses size={26} className="message-bar-notification" />
+        <img src={futureBrain} alt="brain" style = {{width: "26px", height: "26px"}} />
+        {/* <IoChatbubbleEllipses size={26} className="message-bar-notification" /> */}
         <span className="message-badge">{futureCount}</span>
       </div>
 

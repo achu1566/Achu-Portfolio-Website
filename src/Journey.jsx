@@ -1,9 +1,13 @@
 import React from 'react'
 import Navbar from './Components/Navbar';
+import PageLoader from './Components/PageLoader';
+import usePageLoader from './hooks/usePageLoader';
 import "./css/Journey.css";
 const Journey = () => {
+  const isLoading = usePageLoader();
   return (
     <div>
+        <PageLoader isLoading={isLoading} />
         <div>
           <Navbar />
           <section className="journey-section">

@@ -3,11 +3,15 @@ import "./css/About.css";
 import Image from "./assets/Achu.JPG";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import PageLoader from "./Components/PageLoader";
+import usePageLoader from "./hooks/usePageLoader";
 
 const About = () => {
   const navigate = useNavigate();
+  const isLoading = usePageLoader();
   return (
     <section className="about-section" id="about">
+      <PageLoader isLoading={isLoading} />
       <Navbar />
 
       {/* BACKGROUND */}
@@ -59,7 +63,7 @@ const About = () => {
 
 
           <p className="about-description">
-            I’m <span>Achuthan</span>, a <span>Full Stack Developer</span>{" "}
+            I'm <span>Achuthan</span>, a <span>Full Stack Developer</span>{" "}
             passionate about building efficient, scalable, and user-focused web
             applications. I enjoy turning ideas into real-world products by
             combining clean UI design with reliable backend systems.

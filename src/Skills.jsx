@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
+import PageLoader from "./Components/PageLoader";
+import usePageLoader from "./hooks/usePageLoader";
 import "./css/Skills.css";
 
 const SkillCard = ({ label, percent, color }) => {
@@ -44,8 +46,10 @@ const SkillCard = ({ label, percent, color }) => {
 };
 
 const Skills = () => {
+  const isLoading = usePageLoader();
   return (
     <>
+      <PageLoader isLoading={isLoading} />
       <div>
         <Navbar />
 

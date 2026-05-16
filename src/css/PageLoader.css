@@ -1,0 +1,181 @@
+/* ============================
+   PAGE LOADER - Full Screen Overlay
+   ============================ */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a1a;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.page-loader--fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ============================
+   AMBIENT GLOW BEHIND LOGO
+   ============================ */
+.loader-glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.25) 0%,
+    rgba(217, 70, 239, 0.12) 40%,
+    transparent 70%
+  );
+  animation: loaderGlowPulse 2s ease-in-out infinite;
+  filter: blur(30px);
+}
+
+@keyframes loaderGlowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* ============================
+   LOGO WRAPPER & ANIMATION
+   ============================ */
+.loader-logo-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 32px;
+}
+
+.loader-logo {
+  width: 80px;
+  height: 80px;
+  animation: logoPulse 1.8s ease-in-out infinite, logoFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5))
+          drop-shadow(0 0 40px rgba(236, 72, 153, 0.3));
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5))
+            drop-shadow(0 0 40px rgba(236, 72, 153, 0.3));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.8))
+            drop-shadow(0 0 60px rgba(236, 72, 153, 0.5));
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ============================
+   LOADING BAR
+   ============================ */
+.loader-bar-track {
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.loader-bar-fill {
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #a855f7, #d946ef, #ec4899);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.6),
+              0 0 24px rgba(236, 72, 153, 0.3);
+  animation: loaderBarSlide 1.4s ease-in-out infinite;
+}
+
+@keyframes loaderBarSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(250%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ============================
+   LOADING TEXT - Wave Effect
+   ============================ */
+.loader-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  display: flex;
+  gap: 2px;
+}
+
+.loader-text-char {
+  display: inline-block;
+  animation: loaderTextWave 1.6s ease-in-out infinite;
+}
+
+@keyframes loaderTextWave {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    color: rgba(255, 255, 255, 0.35);
+  }
+  30% {
+    transform: translateY(-6px);
+    color: rgba(168, 85, 247, 0.9);
+    text-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+  }
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 480px) {
+  .loader-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .loader-bar-track {
+    width: 150px;
+  }
+
+  .loader-glow {
+    width: 160px;
+    height: 160px;
+  }
+
+  .loader-text {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+}

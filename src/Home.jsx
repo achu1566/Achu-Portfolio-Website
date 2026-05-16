@@ -4,14 +4,18 @@ import { MdEmail } from "react-icons/md";
 import { Typewriter } from "react-simple-typewriter";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import PageLoader from "./Components/PageLoader";
+import usePageLoader from "./hooks/usePageLoader";
 import resumePDF from "./assets/Achu_Resume.pdf";
 
 import "./css/Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
+  const isLoading = usePageLoader();
   return (
     <>
+      <PageLoader isLoading={isLoading} />
       {/* HERO CONTENT */}
       <div className="context">
         <Navbar/>

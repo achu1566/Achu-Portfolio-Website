@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./css/Certificates.css";
 import Navbar from "./Components/Navbar";
+import PageLoader from "./Components/PageLoader";
+import usePageLoader from "./hooks/usePageLoader";
 
 import cert1 from "./certificateAssets/interninhouse.png";
 import cert2 from "./certificateAssets/internnsic.png";
@@ -128,9 +130,11 @@ const certificateData = [
 
 const Certificates = () => {
   const [activeCert, setActiveCert] = useState(null);
+  const isLoading = usePageLoader();
 
   return (
     <>
+      <PageLoader isLoading={isLoading} />
       <div className="cert-section-wrapper">
         <Navbar />
 

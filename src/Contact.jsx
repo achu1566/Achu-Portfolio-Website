@@ -1,7 +1,12 @@
 import "./css/contact.css";
 import { FiPhone } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import map from "./assets/map.png";
+import email from "./assets/communication.png";
+import phone from "./assets/mobile.png";
 import Navbar from "./Components/Navbar";
+import PageLoader from "./Components/PageLoader";
+import usePageLoader from "./hooks/usePageLoader";
 import emailjs from "@emailjs/browser";
 
 const sendEmail = (e) => {
@@ -26,8 +31,10 @@ const sendEmail = (e) => {
     );
 };
 const Contact = () => {
+  const isLoading = usePageLoader();
   return (
     <section className="contact-section">
+      <PageLoader isLoading={isLoading} />
       <Navbar />
 
       {/* BACKGROUND */}
@@ -50,21 +57,22 @@ const Contact = () => {
         <div className="contact-left">
           <span className="contact-tag">CONTACT</span>
           <h1>
-            Let’s build <br />
+            Let's build <br />
             something <span>IMPACTFUL</span>
           </h1>
           <p>
             Have a project idea, internship opportunity, or just want to
-            connect? I’m always open to discussing meaningful work.
+            connect? I'm always open to discussing meaningful work.
           </p>
 
           <div className="contact-info">
-            <div>📧 achuthan1566@email.com</div>
+            <div><img src={email} style = {{width: "20px", height: "20px", position : "relative" , top : "4px", padding:"0 5px 0 0"}} alt="email" /> achuthan1566@email.com</div>
             <div className="contact-line">
-              <FiPhone className="icon" />
+              {/* <FiPhone className="icon" /> */}
+              <img src={phone} style = {{width: "20px", height: "20px"}} alt="phone" />
               <span>+91 9087679686</span>
             </div>
-            <div>📍 Madurai , Tamil Nadu , India</div>
+            <div><img src={map} style = {{width: "20px", height: "20px" , padding:"0 5px 0 0"}} alt="map" /> Madurai , Tamil Nadu , India</div>
           </div>
         </div>
 
