@@ -29,8 +29,12 @@ const Project = () => {
               />
 
               <div className="project-buttons">
-                <button className="btn secondary">View Architecture</button>
-                <button className="btn primary">Live Demo</button>
+                <button 
+                    className="btn secondary"
+                    onClick={() => window.open("https://github.com/achu1566/Personal-Income-Expanse-Tracker", "_blank")}>View Architecture</button>
+                <button 
+                    className="btn primary"
+                    onClick={() => window.open("https://personalexpensetracker-4.onrender.com", "_blank")}>Live Demo</button>
               </div>
             </div>
 
@@ -81,14 +85,18 @@ const Project = () => {
               </div>
 
               <div className="project-buttons">
-                <button className="btn secondary">View Architecture</button>
-                <button className="btn primary">Live Demo</button>
+                <button 
+                  className="btn secondary"
+                  onClick={() => window.open("https://github.com/nagavishnu-05/VCET-Placement-Project", "_blank")}>View Architecture</button>
+                <button 
+                  className="btn primary"
+                  onClick={() => window.open("https://vcet-placement-portal.vercel.app", "_blank")}>Live Demo</button>
               </div>
             </div>
 
             <div className="project-right">
               <h2 className="project-title">
-                Placement Management System
+                VCET - Placement Management Portal
               </h2>
 
               <div className="project-section">
